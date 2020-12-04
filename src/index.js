@@ -4,4 +4,13 @@ import './index.css';
 import App from './containers/App';
 import 'tachyons';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// Redux
+import { Provider } from 'react-redux';
+import store from './store';
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
